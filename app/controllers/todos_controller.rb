@@ -13,6 +13,10 @@ class TodosController < ApplicationController
     end
   end
   
+  def index
+    @todos = Todo.all
+  end
+  
   def show
     @todo = Todo.find(params[:id])
   end
